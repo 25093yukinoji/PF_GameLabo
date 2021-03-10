@@ -1,3 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  #デバイス
+  devise_for :users
+  #トップページ
+  root to: 'homes#top'
+  #ユーザー
+  resources :users, only: [:show]
+  #ゲーム
+  resources :games
 end

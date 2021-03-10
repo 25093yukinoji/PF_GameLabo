@@ -1,0 +1,14 @@
+<h1>新規投稿</h1>
+
+<%= form_with model:@game, local:true do |f| %>
+  <h4>ゲーム画像</h4>
+  <%= attachment_image_tag @game, :image, class: "img-square", size:"300x300" %>
+  <%= f.attachment_field :image %>
+  <h4>タイトル</h4>
+  <%= f.text_field :title%>
+  <h4>説明</h4>
+  <%= f.text_area :introduction %>
+  <h4>参考攻略サイト</h4>
+  <%= f.text_field :site_url %>
+  <%= f.submit '投稿', class:'btn btn-primary' %>
+<% end %>
