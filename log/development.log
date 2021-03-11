@@ -1,0 +1,2847 @@
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ bin/rails:9
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:9
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Migrating to DeviseCreateUsers (20210310144636)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210310144636_devise_create_users.rb:5
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  ↳ db/migrate/20210310144636_devise_create_users.rb:40
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  ↳ db/migrate/20210310144636_devise_create_users.rb:41
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210310144636"]]
+  ↳ bin/rails:9
+  [1m[35m (6.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+Migrating to CreateGames (20210310175545)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "image_id" varchar, "title" varchar, "introduction" text, "total_rate" float, "site_url" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20210310175545_create_games.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210310175545"]]
+  ↳ bin/rails:9
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:9
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ bin/rails:9
+  [1m[36mActiveRecord::InternalMetadata Create (3.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-03-11 14:11:42.659344"], ["updated_at", "2021-03-11 14:11:42.659344"]]
+  ↳ bin/rails:9
+  [1m[35m (3.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ bin/rails:9
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:12:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (4.4ms)
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:12:20 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (3.2ms)
+Completed 200 OK in 7815ms (Views: 7803.2ms | ActiveRecord: 0.0ms)
+
+
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 4622ms (Views: 4621.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:12:25 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 71ms (Views: 70.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 14:12:28 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (1265.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 1327ms (Views: 1311.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 27.127.177.11 at 2021-03-11 14:12:56 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nu+tHKcLfdnLSPBKJXCT5jO0FdBz7/lnwuXPZhC7xp9lUe+DQVlmDmDCGbCHRyx6XPZxqAkacvuVYH4YHbAH0g==", "user"=>{"name"=>"shinha", "email"=>"gulobaldata.get.items@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "shinha"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "encrypted_password", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "shinha"], ["email", "gulobaldata.get.items@gmail.com"], ["encrypted_password", "$2a$12$8MGoty/s4B8LA0YrEMhnvea9vu1aR/6GCVNXd4EywTViEePlIyumW"], ["created_at", "2021-03-11 14:12:57.162541"], ["updated_at", "2021-03-11 14:12:57.162541"]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 364ms (ActiveRecord: 6.3ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:12:57 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (7.6ms)
+Completed 200 OK in 68ms (Views: 67.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/edit" for 27.127.177.11 at 2021-03-11 14:13:01 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 14:13:03 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (11.4ms)
+Completed 200 OK in 95ms (Views: 89.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 27.127.177.11 at 2021-03-11 14:13:04 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 54.9ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 27.127.177.11 at 2021-03-11 14:13:06 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"kMVqqjoW9dflcw8iU98Pkyxr/p8F/Du621vuwjAkSPJW60pySTxp0Mao0ZieHl/aOkSJnUav3Vy/E2bDq04wrA=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 12ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:13:06 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:13:08 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 73ms (Views: 72.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for 27.127.177.11 at 2021-03-11 14:13:09 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_header.html.erb (1.8ms)
+Completed 200 OK in 55ms (Views: 54.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 27.127.177.11 at 2021-03-11 14:13:21 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1PlD362s0+dPadwjW0t57oHX8MagE4gGazeBAuQuq4UQmNNZl5QNlXsxsk21ANsaSbwFS2wwtULKloGBc5TIgg==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com"}, "commit"=>"パスワード再設定メールを送信する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "ba030b4196e17f2390aafb83893c85a91727d08bd5ee0caba4e6bb109bcabfcd"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (1.3ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "ba030b4196e17f2390aafb83893c85a91727d08bd5ee0caba4e6bb109bcabfcd"], ["reset_password_sent_at", "2021-03-11 14:13:21.363286"], ["updated_at", "2021-03-11 14:13:21.364620"], ["id", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.2ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 1089.3ms
+Sent mail to gulobaldata.get.items@gmail.com (979.2ms)
+Date: Thu, 11 Mar 2021 14:13:22 +0000
+From: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+Reply-To: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+To: gulobaldata.get.items@gmail.com
+Message-ID: <604a2582a948c_687621b1be028919@ip-172-31-34-67.ap-northeast-1.compute.internal.mail>
+Subject: =?UTF-8?Q?=E3=83=91=E3=82=B9=E3=83=AF=E3=83=BC=E3=83=89=E3=81=AE=E5=86=8D=E8=A8=AD=E5=AE=9A=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+Z3Vsb2JhbGRhdGEuZ2V0Lml0ZW1zQGdtYWlsLmNvbeanmDwvcD4NCg0K
+PHA+44OR44K544Ov44O844OJ5YaN6Kit5a6a44Gu5L6d6aC844KS5Y+X44GR
+44Gf44Gf44KB44CB44Oh44O844Or44KS6YCB5L+h44GX44Gm44GE44G+44GZ
+44CC5LiL44Gu44Oq44Oz44Kv44GL44KJ44OR44K544Ov44O844OJ44Gu5YaN
+6Kit5a6a44GM44Gn44GN44G+44GZ44CCPC9wPg0KDQo8cD48YSBocmVmPSJo
+dHRwOi8vbG9jYWxob3N0OjMwMDAvdXNlcnMvcGFzc3dvcmQvZWRpdD9yZXNl
+dF9wYXNzd29yZF90b2tlbj1mUXNSY1FWNXJLMlhQRkJzdFByRyI+44OR44K5
+44Ov44O844OJ5aSJ5pu0PC9hPjwvcD4NCg0KPHA+44OR44K544Ov44O844OJ
+5YaN6Kit5a6a44Gu5L6d6aC844KS44GX44Gm44GE44Gq44GE5aC05ZCI44CB
+44GT44Gu44Oh44O844Or44KS54Sh6KaW44GX44Gm44GP44Gg44GV44GE44CC
+PC9wPg0KPHA+44OR44K544Ov44O844OJ44Gu5YaN6Kit5a6a44Gv44CB5LiK
+44Gu44Oq44Oz44Kv44GL44KJ5paw44GX44GE44OR44K544Ov44O844OJ44KS
+55m76Yyy44GZ44KL44G+44Gn5a6M5LqG44GX44G+44Gb44KT44CCPC9wPg0K
+
+Completed 500 Internal Server Error in 2455ms (ActiveRecord: 4.9ms)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+mail (2.7.1) lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+mail (2.7.1) lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+mail (2.7.1) lib/mail/message.rb:2159:in `do_delivery'
+mail (2.7.1) lib/mail/message.rb:260:in `block in deliver'
+actionmailer (5.2.4.5) lib/action_mailer/base.rb:560:in `block in deliver_mail'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionmailer (5.2.4.5) lib/action_mailer/base.rb:558:in `deliver_mail'
+mail (2.7.1) lib/mail/message.rb:260:in `deliver'
+actionmailer (5.2.4.5) lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+actionmailer (5.2.4.5) lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+actionmailer (5.2.4.5) lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+devise (4.7.3) lib/devise/models/authenticatable.rb:200:in `send_devise_notification'
+devise (4.7.3) lib/devise/models/recoverable.rb:99:in `send_reset_password_instructions_notification'
+devise (4.7.3) lib/devise/models/recoverable.rb:52:in `send_reset_password_instructions'
+devise (4.7.3) lib/devise/models/recoverable.rb:136:in `send_reset_password_instructions'
+devise (4.7.3) app/controllers/devise/passwords_controller.rb:15:in `create'
+actionpack (5.2.4.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.5) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:23:01 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_header.html.erb (5.8ms)
+Completed 200 OK in 405ms (Views: 396.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:23:03 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:23:04 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (359.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 413ms (Views: 402.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/password/new" for 27.127.177.11 at 2021-03-11 14:23:07 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 48ms (Views: 45.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 27.127.177.11 at 2021-03-11 14:23:10 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2We4lCeRI+QAG4LF/oAQv/Mor9YP52Nwb5cDZHZurj0dBigSHan9ljRD7KsQy7JLO0NaW8PEXjTONgPn4dTNOg==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com"}, "commit"=>"パスワード再設定メールを送信する"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "f6977fed8530d92beef342373068544410ac8e6df837b8cc3ce61064be1472fc"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "f6977fed8530d92beef342373068544410ac8e6df837b8cc3ce61064be1472fc"], ["reset_password_sent_at", "2021-03-11 14:23:11.043162"], ["updated_at", "2021-03-11 14:23:11.045588"], ["id", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.1ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 56.9ms
+Sent mail to gulobaldata.get.items@gmail.com (939.9ms)
+Date: Thu, 11 Mar 2021 14:23:11 +0000
+From: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+Reply-To: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+To: gulobaldata.get.items@gmail.com
+Message-ID: <604a27cf3a086_6b292d1327c60259@ip-172-31-34-67.ap-northeast-1.compute.internal.mail>
+Subject: =?UTF-8?Q?=E3=83=91=E3=82=B9=E3=83=AF=E3=83=BC=E3=83=89=E3=81=AE=E5=86=8D=E8=A8=AD=E5=AE=9A=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+Z3Vsb2JhbGRhdGEuZ2V0Lml0ZW1zQGdtYWlsLmNvbeanmDwvcD4NCg0K
+PHA+44OR44K544Ov44O844OJ5YaN6Kit5a6a44Gu5L6d6aC844KS5Y+X44GR
+44Gf44Gf44KB44CB44Oh44O844Or44KS6YCB5L+h44GX44Gm44GE44G+44GZ
+44CC5LiL44Gu44Oq44Oz44Kv44GL44KJ44OR44K544Ov44O844OJ44Gu5YaN
+6Kit5a6a44GM44Gn44GN44G+44GZ44CCPC9wPg0KDQo8cD48YSBocmVmPSJo
+dHRwOi8vbG9jYWxob3N0OjMwMDAvdXNlcnMvcGFzc3dvcmQvZWRpdD9yZXNl
+dF9wYXNzd29yZF90b2tlbj01WHJfSlNaeU5RWUQxaGFVUVZzRSI+44OR44K5
+44Ov44O844OJ5aSJ5pu0PC9hPjwvcD4NCg0KPHA+44OR44K544Ov44O844OJ
+5YaN6Kit5a6a44Gu5L6d6aC844KS44GX44Gm44GE44Gq44GE5aC05ZCI44CB
+44GT44Gu44Oh44O844Or44KS54Sh6KaW44GX44Gm44GP44Gg44GV44GE44CC
+PC9wPg0KPHA+44OR44K544Ov44O844OJ44Gu5YaN6Kit5a6a44Gv44CB5LiK
+44Gu44Oq44Oz44Kv44GL44KJ5paw44GX44GE44OR44K544Ov44O844OJ44KS
+55m76Yyy44GZ44KL44G+44Gn5a6M5LqG44GX44G+44Gb44KT44CCPC9wPg0K
+
+Completed 500 Internal Server Error in 1284ms (ActiveRecord: 7.5ms)
+
+
+  
+Net::SMTPAuthenticationError (535-5.7.8 Username and Password not accepted. Learn more at
+):
+  
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:981:in `check_auth_response'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:736:in `auth_plain'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:728:in `authenticate'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:565:in `do_start'
+/home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/2.6.0/net/smtp.rb:518:in `start'
+mail (2.7.1) lib/mail/network/delivery_methods/smtp.rb:109:in `start_smtp_session'
+mail (2.7.1) lib/mail/network/delivery_methods/smtp.rb:100:in `deliver!'
+mail (2.7.1) lib/mail/message.rb:2159:in `do_delivery'
+mail (2.7.1) lib/mail/message.rb:260:in `block in deliver'
+actionmailer (5.2.4.5) lib/action_mailer/base.rb:560:in `block in deliver_mail'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionmailer (5.2.4.5) lib/action_mailer/base.rb:558:in `deliver_mail'
+mail (2.7.1) lib/mail/message.rb:260:in `deliver'
+actionmailer (5.2.4.5) lib/action_mailer/message_delivery.rb:114:in `block in deliver_now'
+actionmailer (5.2.4.5) lib/action_mailer/rescuable.rb:17:in `handle_exceptions'
+actionmailer (5.2.4.5) lib/action_mailer/message_delivery.rb:113:in `deliver_now'
+devise (4.7.3) lib/devise/models/authenticatable.rb:200:in `send_devise_notification'
+devise (4.7.3) lib/devise/models/recoverable.rb:99:in `send_reset_password_instructions_notification'
+devise (4.7.3) lib/devise/models/recoverable.rb:52:in `send_reset_password_instructions'
+devise (4.7.3) lib/devise/models/recoverable.rb:136:in `send_reset_password_instructions'
+devise (4.7.3) app/controllers/devise/passwords_controller.rb:15:in `create'
+actionpack (5.2.4.5) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:194:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rendering.rb:30:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:42:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:132:in `run_callbacks'
+actionpack (5.2.4.5) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `block in instrument'
+activesupport (5.2.4.5) lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+activesupport (5.2.4.5) lib/active_support/notifications.rb:168:in `instrument'
+actionpack (5.2.4.5) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (5.2.4.5) lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+activerecord (5.2.4.5) lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+actionpack (5.2.4.5) lib/abstract_controller/base.rb:134:in `process'
+actionview (5.2.4.5) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.4.5) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/mapper.rb:18:in `block in <class:Constraints>'
+actionpack (5.2.4.5) lib/action_dispatch/routing/mapper.rb:48:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.4.5) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.4.5) lib/action_dispatch/routing/route_set.rb:840:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.4.5) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.5) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.5) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.5) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.5) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.5) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.5) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.5) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:23:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (7.3ms)
+Completed 200 OK in 484ms (Views: 474.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:23:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.6ms)
+  Rendered layouts/_header.html.erb (2.7ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:24:00 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (185.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 237ms (Views: 226.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 14:24:01 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (9.2ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:42:44 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (8.9ms)
+Completed 200 OK in 401ms (Views: 395.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:42:46 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:42:48 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (187.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 250ms (Views: 240.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/password/new" for 27.127.177.11 at 2021-03-11 14:42:50 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/password" for 27.127.177.11 at 2021-03-11 14:42:57 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::PasswordsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0euRIHAzp0FptJAhrwgcMKV0osIZwCi4PIGfJT2xpy8VigGmSgt5M13s/k9BQ77EbR9XT9XjFfydIJ+mqgvEKA==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com"}, "commit"=>"パスワード再設定メールを送信する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."reset_password_token" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["reset_password_token", "e0ec86e44c1993caa5e00a16bd9ee3b6fac75f77dd01a6874dd524b170c38c2f"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Update (2.2ms)[0m  [1m[33mUPDATE "users" SET "reset_password_token" = ?, "reset_password_sent_at" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["reset_password_token", "e0ec86e44c1993caa5e00a16bd9ee3b6fac75f77dd01a6874dd524b170c38c2f"], ["reset_password_sent_at", "2021-03-11 14:42:57.929846"], ["updated_at", "2021-03-11 14:42:57.932816"], ["id", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (4.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/mailer/reset_password_instructions.html.erb
+  Rendered devise/mailer/reset_password_instructions.html.erb (1.2ms)
+Devise::Mailer#reset_password_instructions: processed outbound mail in 25.9ms
+Sent mail to gulobaldata.get.items@gmail.com (2624.8ms)
+Date: Thu, 11 Mar 2021 14:42:58 +0000
+From: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+Reply-To: =?UTF-8?B?44K/44Kk44OI44Or5ZCN?= <noreply@example.com>
+To: gulobaldata.get.items@gmail.com
+Message-ID: <604a2c7263f1_6f3f210951c42476@ip-172-31-34-67.ap-northeast-1.compute.internal.mail>
+Subject: =?UTF-8?Q?=E3=83=91=E3=82=B9=E3=83=AF=E3=83=BC=E3=83=89=E3=81=AE=E5=86=8D=E8=A8=AD=E5=AE=9A=E3=81=AB=E3=81=A4=E3=81=84=E3=81=A6?=
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: base64
+
+PHA+Z3Vsb2JhbGRhdGEuZ2V0Lml0ZW1zQGdtYWlsLmNvbeanmDwvcD4NCg0K
+PHA+44OR44K544Ov44O844OJ5YaN6Kit5a6a44Gu5L6d6aC844KS5Y+X44GR
+44Gf44Gf44KB44CB44Oh44O844Or44KS6YCB5L+h44GX44Gm44GE44G+44GZ
+44CC5LiL44Gu44Oq44Oz44Kv44GL44KJ44OR44K544Ov44O844OJ44Gu5YaN
+6Kit5a6a44GM44Gn44GN44G+44GZ44CCPC9wPg0KDQo8cD48YSBocmVmPSJo
+dHRwOi8vbG9jYWxob3N0OjMwMDAvdXNlcnMvcGFzc3dvcmQvZWRpdD9yZXNl
+dF9wYXNzd29yZF90b2tlbj1GV1dfZkU5WVN0eExqUDdYenVXMSI+44OR44K5
+44Ov44O844OJ5aSJ5pu0PC9hPjwvcD4NCg0KPHA+44OR44K544Ov44O844OJ
+5YaN6Kit5a6a44Gu5L6d6aC844KS44GX44Gm44GE44Gq44GE5aC05ZCI44CB
+44GT44Gu44Oh44O844Or44KS54Sh6KaW44GX44Gm44GP44Gg44GV44GE44CC
+PC9wPg0KPHA+44OR44K544Ov44O844OJ44Gu5YaN6Kit5a6a44Gv44CB5LiK
+44Gu44Oq44Oz44Kv44GL44KJ5paw44GX44GE44OR44K544Ov44O844OJ44KS
+55m76Yyy44GZ44KL44G+44Gn5a6M5LqG44GX44G+44Gb44KT44CCPC9wPg0K
+
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/users/sign_in
+Completed 302 Found in 2878ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:43:00 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 27.127.177.11 at 2021-03-11 14:45:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/actionpack-5.2.4.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (8.0ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/actionpack-5.2.4.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (23.4ms)
+Completed 200 OK in 48ms (Views: 30.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/routes" for 27.127.177.11 at 2021-03-11 14:45:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Rails::InfoController#routes as HTML
+  Rendering /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/actionpack-5.2.4.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb [31 times] (14.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/actionpack-5.2.4.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/railties-5.2.4.5/lib/rails/templates/rails/info/routes.html.erb within layouts/application (22.9ms)
+Completed 200 OK in 28ms (Views: 27.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 27.127.177.11 at 2021-03-11 14:48:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GgjvwSpCpFu3foAC7vogLNcwn6EdcboIcEJ72kXy5gLL6a9zJinf7in3gahBbNrcXxaYnEVH6JLkeXMwRRNgTw==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 427ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:48:55 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.3ms)
+Completed 200 OK in 431ms (Views: 430.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:49:05 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (12.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 91ms (Views: 63.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:52:34 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:52:38 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:52:40 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 14:52:41 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.9ms)
+Completed 200 OK in 56ms (Views: 54.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:52:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:54:38 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 54ms (Views: 52.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:05 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (10.7ms)
+Completed 200 OK in 56ms (Views: 55.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:07 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 49ms (Views: 48.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:40 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 52ms (Views: 51.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:42 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 83ms (Views: 82.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 53ms (Views: 51.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:57:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:58:09 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 14:58:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (7.7ms)
+Completed 200 OK in 93ms (Views: 92.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:04:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (522.3ms)
+Completed 500 Internal Server Error in 529ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `game' for #<#<Class:0x00007fdca83cf640>:0x00007fdca8393078>
+Did you mean?  @game):
+     5:     <!--ゲーム画像-->
+     6:     <div class="form-group">
+     7:       <%= f.label :image, "ゲーム画像" %>
+     8:       <%= attachment_image_tag game, :image, class: "img-square", size:"300x300" %>
+     9:       <%= f.attachment_field :image, placeholder: "ゲーム画像" %>
+    10:     </div>
+    11:     <!--ゲームタイトル-->
+  
+app/views/games/new.html.erb:8:in `block in _app_views_games_new_html_erb__2765468245910675178_70292845927520'
+app/views/games/new.html.erb:4:in `_app_views_games_new_html_erb__2765468245910675178_70292845927520'
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:05:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 53ms (Views: 51.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:05:20 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.9ms)
+Completed 200 OK in 55ms (Views: 53.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:07:33 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.9ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:07:56 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.1ms)
+Completed 200 OK in 49ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/edit" for 27.127.177.11 at 2021-03-11 15:08:14 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+Completed 200 OK in 56ms (Views: 51.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:09:57 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (9.8ms)
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (8.1ms)
+Completed 200 OK in 102ms (Views: 88.8ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:15:13 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (4.3ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/PF_GameLabo/app/views/games/new.html.erb:19: syntax error, unexpected ',', expecting =>
+...='exampleFormControlTextarea1', rows="3" );@output_buffer.sa...
+...                              ^):
+  
+app/views/games/new.html.erb:19: syntax error, unexpected ',', expecting =>
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:15:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/ec2-user/environment/PF_GameLabo/app/views/games/new.html.erb:19: syntax error, unexpected ')', expecting =>
+...ass: 'form-control', rows="3" );@output_buffer.safe_append='
+...                              ^
+/home/ec2-user/environment/PF_GameLabo/app/views/games/new.html.erb:30: syntax error, unexpected end, expecting ')'
+'.freeze;   end 
+            ^~~
+/home/ec2-user/environment/PF_GameLabo/app/views/games/new.html.erb:32: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+/home/ec2-user/environment/PF_GameLabo/app/views/games/new.html.erb:34: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/games/new.html.erb:19: syntax error, unexpected ')', expecting =>
+app/views/games/new.html.erb:30: syntax error, unexpected end, expecting ')'
+app/views/games/new.html.erb:32: syntax error, unexpected ensure, expecting ')'
+app/views/games/new.html.erb:34: syntax error, unexpected end, expecting ')'
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:16:01 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (4.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 57ms (Views: 56.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:16:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:16:21 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:16:22 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:17:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.9ms)
+Completed 200 OK in 71ms (Views: 69.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:17:40 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 48ms (Views: 47.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:17:48 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.9ms)
+Completed 200 OK in 64ms (Views: 62.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:18:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:19:03 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.6ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.6ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:19:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (7.9ms)
+Completed 200 OK in 57ms (Views: 56.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:20:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.4ms)
+Completed 200 OK in 58ms (Views: 57.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:20:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.7ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:24:07 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.1ms)
+Completed 200 OK in 68ms (Views: 64.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:24:37 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.5ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:25:20 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 55ms (Views: 53.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:25:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 51ms (Views: 49.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:25 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 52ms (Views: 51.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:28 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 48ms (Views: 46.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:44 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (7.0ms)
+Completed 200 OK in 66ms (Views: 65.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:45 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.4ms)
+Completed 200 OK in 49ms (Views: 47.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:46 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:26:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:27:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:27:56 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:28:16 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:28:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (9.6ms)
+Completed 200 OK in 116ms (Views: 114.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:28:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.2ms)
+Completed 200 OK in 47ms (Views: 46.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:28:31 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 51ms (Views: 49.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:29:12 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 51ms (Views: 49.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:29:14 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (7.8ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:29:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:29:58 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 47ms (Views: 45.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:40:20 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (30.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 140ms (Views: 118.0ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/users/sign_out" for 27.127.177.11 at 2021-03-11 15:40:26 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"vxtqX38vmfUYgI6z5u+f4fkV2qs2LKy5ApGqmwpIFJ12niD7oJwEyITltBdobLaUGi5LLzjoxpKT7Rsh7hCI4w=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 28ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:40:26 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:40:28 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (10.7ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:40:29 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (1.5ms)
+Completed 200 OK in 53ms (Views: 52.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 27.127.177.11 at 2021-03-11 15:40:48 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Tu2nKse8olOnVOxMdMRwXCDKMsKD0/LWSuFshBEGyCQhi3KM0IMQXw+k+4WK1ae8ohvh8aUiqpWKvfa4yRTDXQ==", "user"=>{"name"=>"", "email"=>"ten.yuki.0601@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"新規登録"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ten.yuki.0601@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", ""], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 407ms (Views: 57.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:40:53 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:41:02 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2aJXBI2SoEIFBm2RcGTgLaiqAqtOzSjMUajQl2FhEkSYcqvtVFuYqcTQbKJx4yYj/5ByUx7+XVmXxK0gPgr4EQ==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 310ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:41:02 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 70ms (Views: 68.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 15:41:05 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 49ms (Views: 44.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 27.127.177.11 at 2021-03-11 15:41:06 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 15:41:10 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 46ms (Views: 44.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:41:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 49ms (Views: 47.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/users/sign_out" for 27.127.177.11 at 2021-03-11 15:41:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"RrFQPfFYG08GmbMmnYuq2852KLz34Y3iz2w8/CHLh+i1yxa6Gjv0Aw0g08Oro3WGdJL/TV7yeJ/XleF72Nh5fw=="}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:41:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 44ms (Views: 43.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:41:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:41:21 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.8ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 67ms (Views: 65.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:45:09 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (9.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 54.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:45:11 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:45:48 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:45:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (12.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 85ms (Views: 83.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:45:51 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 46ms (Views: 44.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:45:53 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 47ms (Views: 46.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 69ms (Views: 67.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:18 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.6ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.9ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 86ms (Views: 85.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:46:20 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 64ms (Views: 63.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:46:21 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 44.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:23 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:34 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 50.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (1.3ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:46:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 77ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:47:41 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.4ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 52ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:48:09 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 53ms (Views: 51.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:49:36 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 106ms (Views: 105.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:49:43 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:49:53 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:50:05 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 72ms (Views: 71.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:22 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 62ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:23 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_header.html.erb (0.7ms)
+Completed 200 OK in 51ms (Views: 50.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:26 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 91ms (Views: 90.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:55 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (5.2ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 49ms (Views: 48.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:57 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.7ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.0ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 51ms (Views: 50.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:51:58 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 119ms (Views: 118.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 27.127.177.11 at 2021-03-11 15:51:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (6.1ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 50ms (Views: 49.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:52:09 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered devise/shared/_links.html.erb (0.9ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (13.8ms)
+  Rendered layouts/_header.html.erb (0.8ms)
+Completed 200 OK in 81ms (Views: 80.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 27.127.177.11 at 2021-03-11 15:52:16 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VoXp+y7MFRGxg1m+RdtjG2FKVWHrrJZ8vhQJgtXu8iX8q4HSiv1SEchY7vy6EnuefqOrO0kItX0DmJFmGraQ5A==", "user"=>{"email"=>"gulobaldata.get.items@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"ログイン"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["email", "gulobaldata.get.items@gmail.com"], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/
+Completed 302 Found in 311ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 15:52:17 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.4ms)
+Completed 200 OK in 73ms (Views: 71.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:52:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 79ms (Views: 77.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:06 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 67ms (Views: 65.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:08 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 104ms (Views: 102.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:10 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:10 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:11 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 48ms (Views: 47.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:42 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 53ms (Views: 52.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 15:54:53 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (2.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/games" for 27.127.177.11 at 2021-03-11 16:04:08 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kC6HM7QQvpKLoI6sxe7/Vn4lCoeM9vdYXOyUSB4Qi9f7ePp3+P2POzPjRu6QIwpeVXOnF4NOd3xYCxmDxVFTMw==", "game"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007fdcb5d61138 @tempfile=#<Tempfile:/tmp/RackMultipart20210311-29014-ouod5f.jpg>, @original_filename="airport.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"game[image]\"; filename=\"airport.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"エアポート", "introduction"=>"hikouki", "site_url"=>"ゲームウィズ\r\nhttps://www.d-wood.com/blog/2017/09/28_9285.html"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18
+  [1m[36mGame Create (29.5ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "image_id", "title", "introduction", "site_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["image_id", "67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3"], ["title", "エアポート"], ["introduction", "hikouki"], ["site_url", "ゲームウィズ\r\nhttps://www.d-wood.com/blog/2017/09/28_9285.html"], ["created_at", "2021-03-11 16:04:08.921121"], ["updated_at", "2021-03-11 16:04:08.921121"]]
+  ↳ app/controllers/games_controller.rb:18
+  [1m[35m (6.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/games
+Completed 302 Found in 82ms (ActiveRecord: 36.9ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:04:08 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:8
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  [1m[36mCACHE Game Load (0.0ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT ?[0m  [["LIMIT", 11]]
+  ↳ /home/ec2-user/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/did_you_mean-1.3.0/lib/did_you_mean/core_ext/name_error.rb:4
+  Rendered games/index.html.erb within layouts/application (392.0ms)
+Completed 500 Internal Server Error in 398ms (ActiveRecord: 0.3ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `games' for #<#<Class:0x00007fdca83cf640>:0x00007fdcb5e31b30>
+Did you mean?  @games):
+    1: <h2>ゲーム一覧</h2>
+    2:   <% games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag post_image, :image %>
+  
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___1903343118540775419_70292960547420'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:04:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (463.8ms)
+Completed 500 Internal Server Error in 470ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `post_image' for #<#<Class:0x00007fdca83cf640>:0x00007fdca84a4f70>
+Did you mean?  path_to_image):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag post_image, :image %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___1903343118540775419_70292846488720'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___1903343118540775419_70292846488720'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___1903343118540775419_70292846488720'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:04:46 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (5.4ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '31fcb5448732e98c76fd83e6dace53158aeb1edad7c2f1cc5a513ce825868fa70dc244076c7cda5529f02386923f46b360419618380a3fbde497212b0fba09f7'
+```
+
+):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag game, :image %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___1903343118540775419_70292845944500'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___1903343118540775419_70292845944500'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___1903343118540775419_70292845944500'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:05:21 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (4.9ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = 'ab20903379fabe46f90097718d9cc9afda47dd09d4defc469367e88d360179d364174453442e0489b68e4fbf731f0c5bdf3d00c7ebee4a5b96a21624c17d698e'
+```
+
+):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag game, :image %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___1903343118540775419_70292959513340'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___1903343118540775419_70292959513340'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___1903343118540775419_70292959513340'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:05:23 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (Refile.secret_key was not set.
+
+Please add the following to your Refile configuration and restart your application:
+
+```
+Refile.secret_key = '8a80a42af865f0dc37d4414710ee545bc77d9e1d59831e4927c3918477d9db0f3e930651fcd57435c88e9b444096c39d189e1923f11efa0ac7da5836326e2aff'
+```
+
+):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag game, :image %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___1903343118540775419_70292952818720'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___1903343118540775419_70292952818720'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___1903343118540775419_70292952818720'
+Started GET "/" for 27.127.177.11 at 2021-03-11 16:06:32 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.4ms)
+  Rendered homes/top.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_header.html.erb (3.1ms)
+Completed 200 OK in 469ms (Views: 461.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 16:06:34 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (35.6ms)
+Completed 200 OK in 109ms (Views: 102.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 16:06:41 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (10.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (11.1ms)
+Completed 200 OK in 123ms (Views: 100.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/games/" for 27.127.177.11 at 2021-03-11 16:06:45 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (2.5ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.3ms)
+Completed 200 OK in 121ms (Views: 119.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/be9aca47a274a1c55e11b90ce62294c45a1642f3/store/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:06:45 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:06:45 +0000] GET "/be9aca47a274a1c55e11b90ce62294c45a1642f3/store/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 33.6ms
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:06:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 51ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:09:00 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.9ms)
+Completed 200 OK in 125ms (Views: 122.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 16:09:02 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (2.2ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 48ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:09:16 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (23.1ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.1ms)
+
+
+  
+ActionView::Template::Error (The asset "imges/no_image.jpg" is not present in the asset pipeline.
+):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "imges/no_image.jpg",size: "300x250") %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___2212269509568993584_70194008343200'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___2212269509568993584_70194008343200'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___2212269509568993584_70194008343200'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:09:44 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (4.2ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+
+  
+ActionView::Template::Error (The asset "imges/noimage-1-580x440.png" is not present in the asset pipeline.
+):
+    2:   <% @games.each do |game| %>
+    3:     <div>
+    4:       <%= link_to game_path(game) do %>
+    5:         <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "imges/noimage-1-580x440.png",size: "300x250") %>
+    6:       <% end %>
+    7:     </div>
+    8:     <div>
+  
+app/views/games/index.html.erb:5:in `block (2 levels) in _app_views_games_index_html_erb___2212269509568993584_70194005239720'
+app/views/games/index.html.erb:4:in `block in _app_views_games_index_html_erb___2212269509568993584_70194005239720'
+app/views/games/index.html.erb:2:in `_app_views_games_index_html_erb___2212269509568993584_70194005239720'
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:11:54 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (131.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (9.7ms)
+Completed 200 OK in 226ms (Views: 225.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:11:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 50ms (Views: 47.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 27.127.177.11 at 2021-03-11 16:12:03 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered layouts/_flash_messages.html.erb (0.3ms)
+  Rendered homes/top.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (2.1ms)
+Completed 200 OK in 82ms (Views: 81.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 16:12:05 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.8ms)
+Completed 200 OK in 54ms (Views: 49.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:12:12 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.6ms)
+Completed 200 OK in 59ms (Views: 58.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/new" for 27.127.177.11 at 2021-03-11 16:12:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#new as HTML
+  Rendering games/new.html.erb within layouts/application
+  Rendered games/new.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 50ms (Views: 49.4ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/games" for 27.127.177.11 at 2021-03-11 16:12:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EHCTNLoa5YhSvY3Fl6MUdepQYhieJqx0vY1Loa36QPZ7Ju5w9vfUIer+RYfCbuF9wQbPiJGeLFC5asZqdruYEg==", "game"=>{"image"=>#<ActionDispatch::Http::UploadedFile:0x00007faeb4080010 @tempfile=#<Tempfile:/tmp/RackMultipart20210311-5482-1mt3pku.jpg>, @original_filename="asia.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"game[image]\"; filename=\"asia.jpg\"\r\nContent-Type: image/jpeg\r\n">, "title"=>"ajia", "introduction"=>"tyuutou", "site_url"=>"https://qiita.com/ruby_math/items/5741cd3fdf778bcef181"}, "commit"=>"投稿"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:17
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/games_controller.rb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:18
+  [1m[36mGame Create (1.4ms)[0m  [1m[32mINSERT INTO "games" ("user_id", "image_id", "title", "introduction", "site_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["user_id", 1], ["image_id", "b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe"], ["title", "ajia"], ["introduction", "tyuutou"], ["site_url", "https://qiita.com/ruby_math/items/5741cd3fdf778bcef181"], ["created_at", "2021-03-11 16:12:59.248132"], ["updated_at", "2021-03-11 16:12:59.248132"]]
+  ↳ app/controllers/games_controller.rb:18
+  [1m[35m (3.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/games_controller.rb:18
+Redirected to https://71d73ca5ef8e4e2ca53972e834851571.vfs.cloud9.ap-northeast-1.amazonaws.com/games
+Completed 302 Found in 26ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:12:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (5.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:13:41 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 16:13:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 49ms (Views: 47.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/edit" for 27.127.177.11 at 2021-03-11 16:13:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /home/ec2-user/.rvm/gems/ruby-2.6.3/gems/activerecord-5.2.4.5/lib/active_record/log_subscriber.rb:98
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/registrations/edit.html.erb within layouts/application (295.2ms)
+  Rendered layouts/_header.html.erb (0.9ms)
+Completed 200 OK in 345ms (Views: 339.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 16:13:50 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 110ms (Views: 108.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 27.127.177.11 at 2021-03-11 16:16:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:4
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 64ms (Views: 61.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:16:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (2.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.3ms)
+Completed 200 OK in 52ms (Views: 51.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/46f0693bdff449645f9c51b6659b54ddd9d2a4b6/store/fill/250/250/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:16:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/c3a3be1c1f8f135c19b692c72bcabfec3d18be56/store/fill/250/250/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" for 27.127.177.11 at 2021-03-11 16:16:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:16:24 +0000] GET "/c3a3be1c1f8f135c19b692c72bcabfec3d18be56/store/fill/250/250/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" 200 196.4ms
+
+Refile::App: [2021-03-11 16:16:24 +0000] GET "/46f0693bdff449645f9c51b6659b54ddd9d2a4b6/store/fill/250/250/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 618.1ms
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:17:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (3.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.2ms)
+Completed 200 OK in 77ms (Views: 75.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:17:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (0.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 83ms (Views: 79.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:18:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (6.7ms)
+Completed 200 OK in 96ms (Views: 94.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/eabeb7c28c9140616ca52f1e64e94a7e213d6dbc/store/fill/250/12/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:18:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/f82ede906d270d571475b73759bd2002d95bd542/store/fill/250/12/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" for 27.127.177.11 at 2021-03-11 16:18:15 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:18:15 +0000] GET "/f82ede906d270d571475b73759bd2002d95bd542/store/fill/250/12/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" 200 162.7ms
+
+Refile::App: [2021-03-11 16:18:16 +0000] GET "/eabeb7c28c9140616ca52f1e64e94a7e213d6dbc/store/fill/250/12/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 586.3ms
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:18:19 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (28.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 103ms (Views: 101.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:18:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (3.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.4ms)
+Completed 200 OK in 54ms (Views: 53.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/15352bb640c84ca5a99cf0dceec1b39c24ebf41b/store/fill/250/120/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:18:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/78d91843271fab18557ee1782ad7048a06e05330/store/fill/250/120/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" for 27.127.177.11 at 2021-03-11 16:18:27 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:18:27 +0000] GET "/78d91843271fab18557ee1782ad7048a06e05330/store/fill/250/120/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" 200 134.8ms
+
+Refile::App: [2021-03-11 16:18:28 +0000] GET "/15352bb640c84ca5a99cf0dceec1b39c24ebf41b/store/fill/250/120/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 553.9ms
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:18:39 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (3.6ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.2ms)
+Completed 200 OK in 65ms (Views: 63.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/c1a240840c520e7dc49bea78a5fa9ee8fec9ad57/store/fill/250/160/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:18:39 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/35383e7dcd687a99d91b0f825e7540c94d505de3/store/fill/250/160/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" for 27.127.177.11 at 2021-03-11 16:18:39 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:18:40 +0000] GET "/35383e7dcd687a99d91b0f825e7540c94d505de3/store/fill/250/160/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" 200 132.9ms
+
+Refile::App: [2021-03-11 16:18:40 +0000] GET "/c1a240840c520e7dc49bea78a5fa9ee8fec9ad57/store/fill/250/160/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 552.4ms
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:20:02 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 53ms (Views: 52.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:20:18 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.0ms)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/attachments/a5f7e7c220ee6dd72c36b78dbfffeee3c83836e9/store/fill/250/200/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" for 27.127.177.11 at 2021-03-11 16:20:18 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Started GET "/attachments/e9ed6067554fd84636e3e05e0240549320c2f971/store/fill/250/200/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:20:18 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:20:18 +0000] GET "/a5f7e7c220ee6dd72c36b78dbfffeee3c83836e9/store/fill/250/200/b7191e858b45ce6455336e6120a2eb0dabfdc0157dbc3ded24004ff5d6fe/image" 200 119.9ms
+
+Refile::App: [2021-03-11 16:20:18 +0000] GET "/e9ed6067554fd84636e3e05e0240549320c2f971/store/fill/250/200/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 545.2ms
+
+Started GET "/games" for 27.127.177.11 at 2021-03-11 16:26:31 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#index as HTML
+  Rendering games/index.html.erb within layouts/application
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT "games".* FROM "games"[0m
+  ↳ app/views/games/index.html.erb:2
+  Rendered games/index.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 52ms (Views: 51.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:26:32 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.2ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.0ms)
+Completed 200 OK in 51ms (Views: 49.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/attachments/b55bd83e7259314cb8bf6d18636ca90027cb7a99/store/fill/300/250/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" for 27.127.177.11 at 2021-03-11 16:26:33 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Refile::App: [2021-03-11 16:26:33 +0000] GET "/b55bd83e7259314cb8bf6d18636ca90027cb7a99/store/fill/300/250/67ec168ef0e23406f9d2183653eb77adcbb459a3f4c71f5b0eb41e134ff3/image" 200 517.2ms
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:28:37 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 52ms (Views: 48.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:32:52 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.7ms)
+Completed 200 OK in 52ms (Views: 50.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:33:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.5ms)
+Completed 200 OK in 72ms (Views: 69.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:34:13 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (2.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 52ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:34:24 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (5.1ms)
+Completed 200 OK in 50ms (Views: 47.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:34:49 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (4.4ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:36:31 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 47ms (Views: 44.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:36:47 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:36:59 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.6ms)
+Completed 200 OK in 45ms (Views: 42.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:37:43 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 46ms (Views: 43.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:38:02 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 45ms (Views: 41.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:38:34 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.2ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.9ms)
+Completed 200 OK in 48ms (Views: 45.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/games/1" for 27.127.177.11 at 2021-03-11 16:39:53 +0000
+Cannot render console from 27.127.177.11! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by GamesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mGame Load (0.1ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/games_controller.rb:8
+  Rendering games/show.html.erb within layouts/application
+  Rendered games/show.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/layouts/_header.html.erb:6
+  Rendered layouts/_header.html.erb (3.8ms)
+Completed 200 OK in 47ms (Views: 44.0ms | ActiveRecord: 0.3ms)
+
+

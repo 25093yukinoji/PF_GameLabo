@@ -1,0 +1,28 @@
+
+<%= form_with model:@game, local:true do |f| %>
+  <div class='row'>
+    <div class='col-md-4 text-right'>
+      <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "img/noimage-1-580x440.png",size: "300x250") %>
+    </div>
+    <div class='col-md-7'>
+      <div class='mb-1'>
+        <h5>タイトル</h5>
+      </div>
+      <div class='mb-2'>
+        <%= @game.title %>
+      </div>
+      <div class='mb-1'>
+        <h5>説明</h5>
+      </div>
+      <div class='mb-2'>
+        <%= @game.introduction %>
+      </div>
+      <div class='mb-1'>
+        <h5>参考攻略サイト</h5>
+      </div>
+      <div class='mb-1'>
+        <%= Rinku.auto_link(@game.site_url, :all, 'target="_blank"').html_safe %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,1 +1,13 @@
-<h2>index</h2>
+<h2>ゲーム一覧</h2>
+  <% @games.each do |game| %>
+    <div class="row">
+      <p>
+        <%= link_to game_path(game) do %>
+          <%= attachment_image_tag game, :image, :fill, 250, 200, fallback: "img/noimage-1-580x440.png" %>
+        <% end %>
+      </p>
+      <p>
+        <%= game.title %>
+      </p>
+    </div>
+  <% end %>

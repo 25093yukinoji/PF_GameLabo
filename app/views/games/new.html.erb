@@ -1,14 +1,30 @@
-<h1>新規投稿</h1>
 
-<%= form_with model:@game, local:true do |f| %>
-  <h4>ゲーム画像</h4>
-  <%= attachment_image_tag @game, :image, class: "img-square", size:"300x300" %>
-  <%= f.attachment_field :image %>
-  <h4>タイトル</h4>
-  <%= f.text_field :title%>
-  <h4>説明</h4>
-  <%= f.text_area :introduction %>
-  <h4>参考攻略サイト</h4>
-  <%= f.text_field :site_url %>
-  <%= f.submit '投稿', class:'btn btn-primary' %>
-<% end %>
+  <h1>新規投稿</h1>
+
+  <%= form_with model:@game, local:true do |f| %>
+    <!--ゲーム画像-->
+    <div class="form-group mt-5">
+      <h5>ゲーム画像</h5>
+      <%= attachment_image_tag @game, :image, class: "img-square", size:"300x300" %>
+      <%= f.attachment_field :image, class: 'form-control-file' %>
+    </div>
+    <!--ゲームタイトル-->
+    <div class="form-group">
+      <h5>タイトル</h5>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <!--ゲーム説明-->
+    <div class="form-group">
+      <h5>説明</h5>
+      <%= f.text_area :introduction, class: 'form-control form-control-lg' %>
+    </div>
+    <!--参考攻略サイト-->
+    <div class="form-group">
+      <h5>参考攻略サイト</h5>
+      <%= f.text_area :site_url, class: 'form-control form-control-lg' %>
+    </div>
+    <!--投稿ボタン-->
+    <div class="form-group">
+      <%= f.submit '投稿', class:'btn btn-primary form-control' %>
+    </div>
+  <% end %>
