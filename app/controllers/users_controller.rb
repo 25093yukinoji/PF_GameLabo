@@ -3,5 +3,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(current_user.id)
+    @games = @user.games.all.page(params[:page]).per(3).reverse_order
   end
 end
