@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   #トップページ
   root to: 'homes#top'
   #ユーザー
-  resources :users, only: [:show]
+  get 'users/my_page' => 'users#show', as: 'my_page'
+  # resources :users, only: [:show]
   #ゲーム
   resources :games
 end
