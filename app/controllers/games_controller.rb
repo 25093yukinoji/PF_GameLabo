@@ -1,7 +1,7 @@
 class GamesController < ApplicationController
 
   def index
-    @games = Game.all.page(params[:page]).per(1)
+    @games = Game.all.page(params[:page]).per(3).reverse_order
   end
 
   def show
@@ -16,7 +16,7 @@ class GamesController < ApplicationController
     @game = Game.new(game_params)
     @game.user_id = current_user.id
     if @game.save
-      redirect_to games_path
+      redirect_to my_page_path
     else
       render :new
     end
@@ -25,13 +25,14 @@ class GamesController < ApplicationController
   def destroy
     @game = Game.find(params[:id])
     @game.destroy
-    redirect_to games_path
+    redirect_to my_page_path
   end
 
   def update
   end
 
   def edit
+    @address = Address.find(params[:id])
   end
 
   private

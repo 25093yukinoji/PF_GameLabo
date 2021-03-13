@@ -1,2 +1,13 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1 class='text-center font-weight-bold mb-4'>マイページ</h1>
+
+<div class='row justify-content-around'>
+  <div><%= link_to "会員情報変更", edit_user_registration_path, class: 'btn btn-primary' %></div>
+  <div><%= link_to "ゲーム新規投稿", new_game_path, class: 'btn btn-success' %></div>
+  <div><%= link_to "お気に入り", games_path, class: 'btn btn-info' %></div>
+</div>
+<div class='mt-4'>
+  <%= render 'games/list',games: @games %>
+</div>
+<div class='row mt-3 justify-content-center'>
+    <%= paginate @games %>
+</div>

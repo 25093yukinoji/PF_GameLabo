@@ -1,5 +1,4 @@
-
-  <h1 class='text-center font-weight-bold mb-4'>新規投稿</h1>
+ <h1 class='text-center font-weight-bold mb-4'>ゲーム編集</h1>
 
   <%= form_with model:@game, local:true do |f| %>
     <!--ゲーム画像-->
@@ -28,7 +27,3 @@
       <%= f.submit '投稿', class:'btn btn-primary form-control' %>
     </div>
   <% end %>
-<hr class="border-dark my-5">
-  <div class="form-group">
-    <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
-  </div>
