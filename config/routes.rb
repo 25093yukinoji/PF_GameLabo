@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   get 'users/my_page' => 'users#show', as: 'my_page'
   # resources :users, only: [:show]
   #ゲーム
-  resources :games
+  resources :games, only: [:index, :show, :new, :edit, :create, :destroy, :update] do
+    resources :chats, only: [:create, :destroy]
+  end
+
 end

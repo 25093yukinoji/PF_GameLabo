@@ -4,29 +4,42 @@
       <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "img/noimage-1-580x440.png",size: "300x250") %>
     </div>
     <div class='col-md-7'>
+      <!--ゲームタイトル-->
       <div class='mb-1'>
         <h5>タイトル</h5>
       </div>
       <div class='mb-2'>
         <%= @game.title %>
       </div>
+      <!--ゲーム説明-->
       <div class='mb-1'>
         <h5>説明</h5>
       </div>
       <div class='mb-2'>
         <%= @game.introduction %>
       </div>
+      <!--参考攻略サイト-->
       <div class='mb-1'>
         <h5>参考攻略サイト</h5>
       </div>
       <div class='mb-1'>
         <%= Rinku.auto_link(@game.site_url, :all, 'target="_blank"').html_safe %>
       </div>
+      <!--レビュー-->
+      <div class='mb-1'>
+        <h5>レビュー</h5>
+      </div>
+      <div class='mb-1'>
+        <h4>★★★★★4.5</h4>
+      </div>
     </div>
   </div>
 <% end %>
+<!--チャット機能-->
+<div class='text-center border border-dark mt-5'><h4>雑談チャット</h4></div>
+<%= render 'games/chat', game: @game,caht: @chat %>
 <!--後に削除予定-->
-<hr class="border-dark my-5">
+<hr class="border-dark mt-2">
   <div class="form-group">
     <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
   </div>
