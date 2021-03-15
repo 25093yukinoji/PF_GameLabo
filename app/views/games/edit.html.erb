@@ -4,8 +4,8 @@
     <!--ゲーム画像-->
     <div class="form-group mt-5">
       <h5>ゲーム画像</h5>
-      <%= attachment_image_tag @game, :image, class: "img-square", size:"300x300" %>
-      <%= f.attachment_field :image, class: 'form-control-file' %>
+      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png", size:"300x200" %></p>
+      <p><%= f.attachment_field :image, class: 'justify-content-center' %></p>
     </div>
     <!--ゲームタイトル-->
     <div class="form-group">
@@ -27,3 +27,7 @@
       <%= f.submit '投稿', class:'btn btn-primary form-control' %>
     </div>
   <% end %>
+  <hr class="border-dark my-5">
+  <div class="form-group">
+    <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
+  </div>

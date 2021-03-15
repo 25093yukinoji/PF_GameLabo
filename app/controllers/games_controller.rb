@@ -30,10 +30,20 @@ class GamesController < ApplicationController
   end
 
   def update
+    @game = Game.find(params[:id])
+    if @game.update(game_params)
+      redirect_to game_path(@game)
+    else
+      render :edit
+    end
   end
 
   def edit
-    @address = Address.find(params[:id])
+    @game = Game.find(params[:id])
+  end
+
+  def favorites
+    @games = current_user.favorite_games.includes(:user).order(created_at: :desc)
   end
 
   private

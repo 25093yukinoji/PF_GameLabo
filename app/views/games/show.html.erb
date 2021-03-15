@@ -1,6 +1,6 @@
 <%= form_with model:@game, local:true do |f| %>
   <div class='row'>
-    <div class='col-md-4 text-right'>
+    <div class='img-fluid rounded mx-auto d-block'>
       <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "img/noimage-1-580x440.png",size: "300x250") %>
     </div>
     <div class='col-md-7'>
@@ -16,14 +16,14 @@
         <h5>説明</h5>
       </div>
       <div class='mb-2'>
-        <%= @game.introduction %>
+        <%= simple_format(@game.introduction) %>
       </div>
       <!--参考攻略サイト-->
       <div class='mb-1'>
         <h5>参考攻略サイト</h5>
       </div>
       <div class='mb-1'>
-        <%= Rinku.auto_link(@game.site_url, :all, 'target="_blank"').html_safe %>
+        <%= simple_format(Rinku.auto_link(@game.site_url, :all, 'target="_blank"').html_safe) %>
       </div>
       <!--レビュー-->
       <div class='mb-1'>
@@ -33,10 +33,18 @@
         <h4>★★★★★4.5</h4>
       </div>
     </div>
+    <div class='col-md-1'>
+      <% if @game.user == current_user %>
+      <% else %>
+        <div class='option'>
+          <%= render partial: 'favorites/favorite', locals: {game: @game} %>
+        </div>
+      <% end %>
+    </div>
   </div>
 <% end %>
 <!--チャット機能-->
-<div class='text-center border border-dark mt-5'><h4>雑談チャット</h4></div>
+<div class='text-center border border-dark bg-warning mt-5'><h4>チャットスペース</h4></div>
 <%= render 'games/chat', game: @game,caht: @chat %>
 <!--後に削除予定-->
 <hr class="border-dark mt-2">
