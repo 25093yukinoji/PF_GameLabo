@@ -14,21 +14,23 @@
  *= require_self
  */
 
- @import "bootstrap";
- // max-width
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+// max-width
 
-  .mw-md {
-    max-width: 576px;
-  }
-  .mw-xl {
-    max-width: 1200px;
-  }
-  // 「ログインしました」などのフラッシュ用スタイル
+.mw-md {
+  max-width: 576px;
+}
+.mw-xl {
+  max-width: 1200px;
+}
+// 「ログインしました」などのフラッシュ用スタイル
 
-  .alert-notice {
-    @extend .alert-info;
-  }
+.alert-notice {
+  @extend .alert-info;
+}
 
-  .alert-alert {
-    @extend .alert-danger;
-  }
+.alert-alert {
+  @extend .alert-danger;
+}

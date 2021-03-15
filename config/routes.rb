@@ -9,6 +9,10 @@ Rails.application.routes.draw do
   #ゲーム
   resources :games, only: [:index, :show, :new, :edit, :create, :destroy, :update] do
     resources :chats, only: [:create, :destroy]
+    member do
+      post   '/favorite/:game_id' => 'favorites#favorite',   as: 'favorite'
+      delete '/favorite/:game_id' => 'favorites#unfavorite', as: 'unfavorite'
+    end
   end
 
 end
