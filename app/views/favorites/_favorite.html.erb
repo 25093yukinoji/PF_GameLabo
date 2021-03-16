@@ -1,4 +1,4 @@
-<div class="option_favorite" id="favorite-link-<%= @game.id %>"></div>
+<div class="option_favorite" id="favorite-link-<%= @game.id %>">
   <% if current_user.favorites.find_by(game_id: game.id) %>
     <%= link_to unfavorite_game_path(@game.id, @game.id), method: :delete, remote: true, class: "option_favorite-on" do %>
       <div class="fas fa-heart heart_red"></div>
@@ -8,3 +8,4 @@
       <div class="far fa-heart heart_red"></div>
     <% end %>
   <% end %>
+</div>
