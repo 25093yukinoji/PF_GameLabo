@@ -34,11 +34,13 @@
       </div>
     </div>
     <div class='col-md-1'>
-      <% if @game.user == current_user %>
-      <% else %>
-        <div class='option'>
-          <%= render partial: 'favorites/favorite', locals: {game: @game} %>
-        </div>
+      <% if user_signed_in? %>
+        <% if @game.user == current_user %>
+        <% else %>
+          <div class='option'>
+            <%= render partial: 'favorites/favorite', locals: {game: @game} %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
