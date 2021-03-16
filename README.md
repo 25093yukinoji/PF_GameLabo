@@ -1,24 +1,28 @@
-# README
+# GameLabo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## サイト概要
+ゲームの総合レビューサイト
 
-Things you may want to cover:
+### サイトテーマ
+ゲームの情報やレビュー、雑談チャットなどゲームに関することが網羅できる情報サイトです。
 
-* Ruby version
+### テーマを選んだ理由
+製作者自身の趣味がゲームで、攻略サイトや交流場等のサイトが別々のサイトであることが多く１つで纏めて見れるサイトがあると便利だなと思い作成いたしました。
 
-* System dependencies
+### ターゲットユーザ
+*ゲームが趣味で新しいゲームの情報が欲しい人
+*ゲームに興味を持ち始め度のゲームが面白いのか知りたい人
 
-* Configuration
+### 主な利用シーン
+*新しくゲームを始める際、どんなゲームなのかを知りたい時
+*面白いゲームなのに知名度が低く、評価されていないので多くの人に広めたい時
 
-* Database creation
+## チャレンジ要素一覧
+<https://docs.google.com/spreadsheets/d/1ylq8KVC0MmVSxBTtM3vbPU0sHH_KJqiODXvqc-rhdq8/edit#gid=0>
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 開発環境
+- OS：Linux2(CentOS)
+- 言語：HTML,CSS,JavaScript,Ruby,SQL
+- フレームワーク：Ruby on Rails
+- JSライブラリ：jQuery
+- IDE：Cloud9
