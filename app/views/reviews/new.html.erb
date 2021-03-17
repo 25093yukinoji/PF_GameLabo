@@ -1,0 +1,45 @@
+<%= form_with model:[@game,@review], local: true do |f| %>
+
+  <!--エラーメッセージ-->
+  <!--<= render 'layouts/error_messages', model: f.object %>-->
+
+  <!--商品コードの送信-->
+  <%= f.hidden_field :game_id, { value: @game.id} %>
+
+  <!-- 評価 -->
+  <div class="form-group row" id="star">
+    <%= f.label :rate,'評価 ', class:'col-md-3 col-form-label' %>
+    <%= f.hidden_field :rate, id: :review_star %>
+  </div>
+
+  <!-- 評価javascript -->
+  <script>
+  $('#star').raty({
+    size     : 36,
+    starOff:  '<%= asset_path('star-off.png') %>',
+    starOn : '<%= asset_path('star-on.png') %>',
+    starHalf: '<%= asset_path('star-half.png') %>',
+    scoreName: 'review[rate]',
+    half: true,
+  });
+  </script>
+
+  <!-- 口コミ -->
+  <div class="form-group row">
+    <%= f.label :body, '口コミ内容 ', class:'col-md-3 col-form-label' %>
+    <div class="col-md-9">
+      <%= f.text_area :body, class: "form-control", rows: "5",
+        placeholder:'内容を記入' %>
+    </div>
+  </div>
+
+  <!-- 確認ボタン -->
+  <div class="form-group row justify-content-end">
+    <div class="col-md-9">
+      <%= f.submit '投稿する', class:"btn btn-success" %>
+    </div>
+    <div><%= link_to "戻る", game_reviews_path(@game), class:"btn btn-info" %></div>
+  </div>
+
+<% end %>
+<!-- /口コミ入力フォーム -->

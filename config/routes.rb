@@ -5,15 +5,14 @@ Rails.application.routes.draw do
   root to: 'homes#top'
   #ユーザー
   get 'users/my_page' => 'users#show', as: 'my_page'
-  resources :favorites, only: [:index]
-  # resources :users, only: [:show]
   #ゲーム
   resources :games, only: [:index, :show, :new, :edit, :create, :destroy, :update] do
     resources :chats, only: [:create, :destroy]
+    resources :reviews
     member do
       post   '/favorite/:game_id' => 'favorites#favorite',   as: 'favorite'
       delete '/favorite/:game_id' => 'favorites#unfavorite', as: 'unfavorite'
     end
   end
-
+  resources :favorites, only: [:index]
 end

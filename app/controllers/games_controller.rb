@@ -7,6 +7,13 @@ class GamesController < ApplicationController
   def show
     @game = Game.find(params[:id])
     @chat = Chat.new
+    @chats = @game.chats.page(params[:page]).per(10).reverse_order
+    @review = Review.new
+    if @game.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @game.reviews.average(:rate).round(2)
+    end
   end
 
   def new
