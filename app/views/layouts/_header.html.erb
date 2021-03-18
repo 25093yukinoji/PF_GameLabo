@@ -11,6 +11,9 @@
             <%= link_to 'ゲーム一覧', games_path, class: 'nav-link' %>
           </li>
           <li class="nav-item active">
+            <%= link_to 'ランキング', ranking_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
             <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'nav-link' %>
           </li>
       <% else %>
@@ -22,6 +25,9 @@
           </li>
           <li class="nav-item active">
             <%= link_to 'ゲーム一覧', games_path, class: 'nav-link' %>
+          </li>
+          <li class="nav-item active">
+            <%= link_to 'ランキング', ranking_path, class: 'nav-link' %>
           </li>
         <% end %>
       </ul>

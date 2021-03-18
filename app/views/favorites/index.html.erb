@@ -10,7 +10,7 @@
         <h4><%= game.title %></h4>
       </div>
       <div class='col-2 align-self-center'>
-        <h4>★★★★★4.5</h4>
+        <div class="review-total_rate" data-score=<%= game.total_rate %>></div>
       </div>
       <% if game.user == current_user %>
         <div class='col-1 align-self-center'>
@@ -25,3 +25,14 @@
 <div class='row mt-5 justify-content-center'>
   <%= paginate @favorite_games %>
 </div>
+<script>
+  $('.review-total_rate').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
