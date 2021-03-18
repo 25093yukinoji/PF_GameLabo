@@ -1,6 +1,8 @@
 class GamesController < ApplicationController
 
   def index
+    @q = Game.ransack(params[:q])
+    @games = @q.result(distinct: true)
     @games = Game.all.page(params[:page]).per(3).reverse_order
   end
 
@@ -57,7 +59,16 @@ class GamesController < ApplicationController
   def rank
     @ranking = Game.all.order(total_rate: :DESC).limit(10)
   end
+
+  def search
+    @q = Game.search(search_params)
+    @games = @q.result(distinct: true).page.per(3).reverse_order
+  end
   private
+
+  def search_params
+    params.require(:q).permit!
+  end
 
   def game_params
     params.require(:game).permit(:image, :title, :introduction, :total_rate, :site_url)

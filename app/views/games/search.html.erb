@@ -1,0 +1,9 @@
+<h1 class='text-center font-weight-bold mb-3'>検索結果</h1>
+  <%= render 'games/list',games: @games %>
+<div class='row mt-5 justify-content-center'>
+    <%= paginate @games %>
+</div>
+<hr class="border-dark mt-2">
+  <div class="form-group">
+    <%= link_to "戻る", games_path, class:"btn btn-info btn-block" %>
+  </div>
