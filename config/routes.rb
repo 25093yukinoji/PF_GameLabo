@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'users/my_page' => 'users#show', as: 'my_page'
   #ランキング
   get 'games/ranking' => 'games#rank', as: 'ranking'
+  # 検索機能
+  get 'search', to: 'games#search'
+  post 'search', to: 'games#search'
   #ゲーム
   resources :games, only: [:index, :show, :new, :edit, :create, :destroy, :update] do
     resources :chats, only: [:create, :destroy]
