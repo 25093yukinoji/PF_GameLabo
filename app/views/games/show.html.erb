@@ -30,7 +30,7 @@
         <h5>レビュー</h5>
       </div>
       <div class='row ml-1 mb-1'>
-        <div class="average-review-rating" data-score=<%= @average_review %>></div>
+        <div class="review-total_rate" data-score=<%= @game.total_rate %>></div>
         <div class='ml-2 align-self-center'>レビュー数： <%= @game.reviews.count %>件</div>
         <div class='ml-2 align-self-center'><%= link_to "レビューを見る", game_reviews_path(@game), class: 'btn btn-sm btn-primary' %></div>
       </div>
@@ -54,10 +54,10 @@
 <!--後に削除予定-->
 <hr class="border-dark mt-2">
   <div class="form-group">
-    <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
+    <%= link_to "戻る", games_path, class:"btn btn-info btn-block" %>
   </div>
 <script>
-  $('.average-review-rating').raty({
+  $('.review-total_rate').raty({
     readOnly: true,
     starOn: "<%= asset_path('star-on.png') %>",
     starOff: "<%= asset_path('star-off.png') %>",

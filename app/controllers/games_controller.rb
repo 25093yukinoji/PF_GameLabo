@@ -10,10 +10,11 @@ class GamesController < ApplicationController
     @chats = @game.chats.page(params[:page]).per(10).reverse_order
     @review = Review.new
     if @game.reviews.blank?
-      @average_review = 0
+      @game.total_rate = 0
     else
-      @average_review = @game.reviews.average(:rate).round(2)
+      @game.total_rate = @game.reviews.average(:rate).round(2)
     end
+    @game.save
   end
 
   def new
@@ -53,6 +54,9 @@ class GamesController < ApplicationController
     @games = current_user.favorite_games.includes(:user).order(created_at: :desc)
   end
 
+  def rank
+    @ranking = Game.all.order(total_rate: :DESC).limit(10)
+  end
   private
 
   def game_params
