@@ -1,6 +1,5 @@
-
-  <h1 class='text-center font-weight-bold mb-4'>新規投稿</h1>
-
+<h1 class='text-center font-weight-bold mb-4'>新規投稿</h1>
+  <%= render 'layouts/errors', obj: @game %>
   <%= form_with model:@game, local:true do |f| %>
     <!--ゲーム画像-->
     <div class="form-group mt-5">

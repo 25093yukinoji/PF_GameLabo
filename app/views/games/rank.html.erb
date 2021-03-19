@@ -1,13 +1,13 @@
 <h1 class='text-center font-weight-bold mb-3'>ランキング</h1>
   <% @ranking.each do |game| %>
     <div class='row'>
-      <div class='col-4 pt-2'>
+      <div class='col-md-4 pt-2'>
         <%= link_to game_path(game) do %>
           <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png" %>
         <% end %>
       </div>
       <div class='col-3 align-self-center'>
-        <h4><%= game.title %></h4>
+        <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
       <div class='col-2 align-self-center'>
         <div class="review-total_rate" data-score=<%= game.total_rate %>></div>
