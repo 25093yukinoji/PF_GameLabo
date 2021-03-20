@@ -3,5 +3,5 @@ class Favorite < ApplicationRecord
   belongs_to :user
   belongs_to :game
   # 同じ投稿に対してのバリデーション
-  validates_uniqueness_of :game_id, scope: :user_id
+  validates :game_id, uniqueness: { scope: :user_id }
 end

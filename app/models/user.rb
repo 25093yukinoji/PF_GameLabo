@@ -4,10 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  #デバイス　ユーザーネーム　バリデーション
+  # デバイス　ユーザーネーム　バリデーション
   validates :name,
-  uniqueness: { case_sensitive: :false },
-  length: { minimum: 1, maximum: 20 }
+            uniqueness: { case_sensitive: :false },
+            length: { minimum: 1, maximum: 20 }
 
   # 関係性
   has_many :games, dependent: :destroy

@@ -18,5 +18,4 @@ class FavoritesController < ApplicationController
     favorite = current_user.favorites.find_by(game_id: @game.id)
     favorite.destroy
   end
-
 end

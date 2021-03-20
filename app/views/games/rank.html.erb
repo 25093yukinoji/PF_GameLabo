@@ -2,7 +2,7 @@
   <% @ranking.each.with_index(1) do |game,i| %>
     <% i += @base_of_ranking %>
     <div class='row'>
-      <div class='align-self-center'><b>第<%= i %>位</b></div>
+      <div class='h3 align-self-center'><b>第<span class='ranknumber h2'><%= i %></span>位</b></div>
       <div class='col-md-4 pt-2'>
         <%= link_to game_path(game) do %>
           <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png" %>
@@ -12,7 +12,7 @@
         <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
       <div class='col-2 align-self-center'>
-        <div class="review-total_rate" data-score=<%= game.total_rate %>></div>
+        <div id="rank-review-total_rate_<%= game.id %>" data-score=<%= game.total_rate %>></div>
       </div>
       <% if game.user == current_user %>
         <div class='col-1 align-self-center'>
@@ -25,7 +25,8 @@
     </div>
   <% end %>
 <script>
-  $('.review-total_rate').raty({
+  <% @ranking.each do |game| %>
+  $('#rank-review-total_rate_<%= game.id %>').raty({
     readOnly: true,
     starOn: "<%= asset_path('star-on.png') %>",
     starOff: "<%= asset_path('star-off.png') %>",
@@ -34,4 +35,5 @@
       return $(this).attr('data-score')
     }
   });
+  <% end %>
 </script>
