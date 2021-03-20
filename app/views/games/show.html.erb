@@ -50,7 +50,9 @@
 <!--チャット機能-->
 <div class='text-center border border-dark bg-warning mt-5'><h4>チャットスペース</h4></div>
 <%= render 'games/chat', game: @game,chat: @chat %>
-<%= paginate @chats %>
+<div class='row mt-1 justify-content-center'>
+  <%= paginate @chats %>
+</div>
 <hr class="border-dark mt-2">
   <div class="form-group">
     <%= link_to "戻る", games_path, class:"btn btn-info btn-block" %>

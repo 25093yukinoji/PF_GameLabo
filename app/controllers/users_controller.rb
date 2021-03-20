@@ -6,7 +6,4 @@ class UsersController < ApplicationController
     @games = @user.games.all.page(params[:page]).per(3).reverse_order
   end
 
-  # def favorites
-  #   @favorites = current_user.favorite(@game).all
-  # end
 end

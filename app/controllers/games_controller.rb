@@ -3,7 +3,7 @@ class GamesController < ApplicationController
   def index
     @q = Game.ransack(params[:q])
     @games = @q.result(distinct: true)
-    @games = Game.all.page(params[:page]).per(3).reverse_order
+    @games = Game.all.page(params[:page]).per(5).reverse_order
   end
 
   def show
@@ -58,11 +58,12 @@ class GamesController < ApplicationController
 
   def rank
     @ranking = Game.all.order(total_rate: :DESC).limit(10)
+    @base_of_ranking = 0
   end
 
   def search
     @q = Game.search(search_params)
-    @games = @q.result(distinct: true).page.per(3).reverse_order
+    @games = @q.result(distinct: true).page.per(5).reverse_order
   end
   private
 

@@ -38,20 +38,25 @@
 }
 .main-visual-content {
   position:  absolute;
-  width: 70%;
+  width: 50%;
   height: 180px;
-  background-color: rgba(0, 0, 0, 0.5);
-  text-align: left;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
-  padding-top: 60px;
+}
+
+.main-visual-title {
+  color: #fff; /* 文字色を白に変更 */
+  font-size: 6rem;
 }
 
 .main-visual-text {
   color: #fff; /* 文字色を白に変更 */
+  font-size: 2rem;
 }
 // max-width
 .mw-md {
@@ -61,7 +66,9 @@
   max-width: 1200px;
 }
 // 「ログインしました」などのフラッシュ用スタイル
-
+header {
+  background: #C2EEFF;
+}
 .alert-notice {
   @extend .alert-info;
 }
@@ -83,3 +90,4 @@
 #error_explanation {
   color: red;
 }
+
