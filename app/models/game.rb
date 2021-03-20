@@ -10,5 +10,4 @@ class Game < ApplicationRecord
   # バリデーション
   validates :title, presence: true
   validates :introduction, presence: true, length: { maximum: 500 }
-
 end

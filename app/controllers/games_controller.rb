@@ -1,5 +1,4 @@
 class GamesController < ApplicationController
-
   def index
     @q = Game.ransack(params[:q])
     @games = @q.result(distinct: true)
@@ -11,11 +10,11 @@ class GamesController < ApplicationController
     @chat = Chat.new
     @chats = @game.chats.page(params[:page]).per(10).reverse_order
     @review = Review.new
-    if @game.reviews.blank?
-      @game.total_rate = 0
-    else
-      @game.total_rate = @game.reviews.average(:rate).round(2)
-    end
+    @game.total_rate = if @game.reviews.blank?
+                         0
+                       else
+                         @game.reviews.average(:rate).round(2)
+                       end
     @game.save
   end
 
@@ -65,6 +64,7 @@ class GamesController < ApplicationController
     @q = Game.search(search_params)
     @games = @q.result(distinct: true).page.per(5).reverse_order
   end
+
   private
 
   def search_params
@@ -74,5 +74,4 @@ class GamesController < ApplicationController
   def game_params
     params.require(:game).permit(:image, :title, :introduction, :total_rate, :site_url)
   end
-
 end

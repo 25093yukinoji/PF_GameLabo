@@ -3,10 +3,7 @@
   <div class='row justify-content-end'>
     <%= render 'search_form' %>
   </div>
-  <div class='row justify-content-end'>
-    <%= sort_link(@q, :title, "タイトル") %>
-  </div>
-    <%= render 'games/list' %>
+  <div><%= render 'games/list' %></div>
   <div class='row mt-5 justify-content-center'>
       <%= paginate @games %>
   </div>
