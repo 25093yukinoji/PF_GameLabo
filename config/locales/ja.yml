@@ -1,0 +1,13 @@
+ja:
+  activerecord:
+    attributes:
+      game:
+        title: タイトル
+        introduction: 説明
+
+      review:
+        body: レビュー内容
+        rate: 評価
+
+      chat:
+        comment: チャット内容

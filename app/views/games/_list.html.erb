@@ -1,21 +1,21 @@
 <% @games.each do |game| %>
     <div class='row'>
-      <div class='col-4 pt-2'>
+      <div class='img-fluid col-md-4 pt-2'>
         <%= link_to game_path(game) do %>
           <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png" %>
         <% end %>
       </div>
-      <div class='col-3 align-self-center'>
-        <h4><%= game.title %></h4>
+      <div class='col-md-3 align-self-center'>
+        <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
-      <div class='col-2 align-self-center'>
+      <div class='col-md-2 align-self-center'>
         <div class="review-total_rate" data-score=<%= game.total_rate %>></div>
       </div>
       <% if game.user == current_user %>
-        <div class='col-1 align-self-center'>
+        <div class='col-md-1 align-self-center'>
           <%= link_to 'Edit', edit_game_path(game), class: "btn btn-success edit_game_#{game.id}" %>
         </div>
-        <div class='col-1 align-self-center'>
+        <div class='col-md-1 align-self-center'>
           <%= link_to 'Destroy', game_path(game), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger destroy_game_#{game.id}"%>
         </div>
       <% end %>

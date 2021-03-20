@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   #デバイス
   devise_for :users
+  #ゲストログイン
+  post '/homes/guest_sign_in', to: 'homes#new_guest'
   #トップページ
   root to: 'homes#top'
   #ユーザー

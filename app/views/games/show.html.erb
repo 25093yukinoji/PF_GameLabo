@@ -1,38 +1,38 @@
 <%= form_with model:@game, local:true do |f| %>
   <div class='row'>
-    <div class='img-fluid rounded mx-auto d-block'>
+    <div class='img-fluid pb-2 mx-auto'>
       <%= attachment_image_tag(@game, :image, :fill, 300, 250, fallback: "img/noimage-1-580x440.png",size: "300x250") %>
     </div>
     <div class='col-md-7'>
       <!--ゲームタイトル-->
       <div class='mb-1'>
-        <h5>タイトル</h5>
+        <h5 class='font-weight-bold'>タイトル</h5>
       </div>
       <div class='mb-2'>
         <%= @game.title %>
       </div>
       <!--ゲーム説明-->
       <div class='mb-1'>
-        <h5>説明</h5>
+        <h5 class='font-weight-bold'>説明</h5>
       </div>
       <div class='mb-2'>
         <%= simple_format(@game.introduction) %>
       </div>
       <!--参考攻略サイト-->
       <div class='mb-1'>
-        <h5>参考攻略サイト</h5>
+        <h5 class='font-weight-bold'>参考攻略サイト</h5>
       </div>
       <div class='mb-1'>
         <%= simple_format(Rinku.auto_link(@game.site_url, :all, 'target="_blank"').html_safe) %>
       </div>
       <!--レビュー-->
       <div class='mb-1'>
-        <h5>レビュー</h5>
+        <h5 class='font-weight-bold'>レビュー</h5>
       </div>
       <div class='row ml-1 mb-1'>
         <div class="review-total_rate" data-score=<%= @game.total_rate %>></div>
         <div class='ml-2 align-self-center'>レビュー数： <%= @game.reviews.count %>件</div>
-        <div class='ml-2 align-self-center'><%= link_to "レビューを見る", game_reviews_path(@game), class: 'btn btn-sm btn-primary' %></div>
+        <div class='ml-sm-2 align-self-center'><%= link_to "レビューを見る", game_reviews_path(@game), class: 'btn btn-sm btn-primary' %></div>
       </div>
     </div>
     <div class='col-md-1'>
@@ -50,8 +50,9 @@
 <!--チャット機能-->
 <div class='text-center border border-dark bg-warning mt-5'><h4>チャットスペース</h4></div>
 <%= render 'games/chat', game: @game,chat: @chat %>
-<%= paginate @chats %>
-<!--後に削除予定-->
+<div class='row mt-1 justify-content-center'>
+  <%= paginate @chats %>
+</div>
 <hr class="border-dark mt-2">
   <div class="form-group">
     <%= link_to "戻る", games_path, class:"btn btn-info btn-block" %>

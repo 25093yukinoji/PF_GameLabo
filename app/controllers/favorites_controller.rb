@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @favorite_games = current_user.favorite_games.page(params[:page]).per(3).reverse_order
+    @favorite_games = current_user.favorite_games.page(params[:page]).per(5).reverse_order
   end
 
   def favorite
