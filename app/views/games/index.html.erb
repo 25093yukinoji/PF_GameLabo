@@ -10,3 +10,19 @@
       <%= paginate @games %>
   </div>
 </div>
+<!--星評価　発火-->
+<script>
+<% if @games.present? %>
+  <% @games.each do |game| %>
+  $('#review-total_rate_<%= game.id %>').raty({
+    readOnly: true,
+    starOn: "<%= asset_path('star-on.png') %>",
+    starOff: "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+  <% end %>
+<% end %>
+</script>

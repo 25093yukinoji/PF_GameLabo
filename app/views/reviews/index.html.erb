@@ -11,10 +11,12 @@
     <div class="row border-top  border-dark">
       <div class="col-md-6 mt-1 mb-1">
         <div class=" reviews-review">
+          <!--レビュー作成日-->
           <p><%= review.created_at.strftime('%Y/%m/%d %H:%M') %></p>
-          <h5 class="mb-3">評価：<%= review.rate %>点</h5>
           <!--星評価-->
-         <div id="star-rate-<%= review.id %>"></div>
+          <h5 class="mb-3">評価：<%= review.rate %>点</h5>
+          <div id="star-rate-<%= review.id %>"></div>
+         <!--星評価　発火-->
           <script>
           $('#star-rate-<%= review.id %>').raty({
             size: 36,
@@ -26,10 +28,12 @@
             score: <%= review.rate %>,
           });
           </script>
-        <!--/星評価-->
+          <!--/星評価-->
+          <!--レビュー内容-->
           <p><%= simple_format(review.body) %></p>
         </div>
       </div>
+      <!--削除ボタン-->
       <div class="col align-self-center edit-button">
         <% if current_user == review.user %>
           <%= link_to 'レビューを削除', game_review_path(@game, review), method: :delete, class:'btn btn-danger' %>
@@ -38,6 +42,7 @@
     </div>
   <% end %>
 <% end %>
+<!--ページネーション-->
 <div class='row mt-5 justify-content-center'>
     <%= paginate @reviews %>
 </div>

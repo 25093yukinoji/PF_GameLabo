@@ -1,10 +1,10 @@
 <% if obj.errors.any? %>
-  <div id="error_explanation">
+  <div id="error_explanation" class="alert alert-danger">
     <div class='row'>
       <h3><%= pluralize(obj.errors.count, "件のエラーが出ています") %></h3>
     </div>
     <div class='row'>
-      <ul>
+      <ul class="col mb-0">
         <% obj.errors.full_messages.each do |message| %>
           <li><%= message %></li>
         <% end %>

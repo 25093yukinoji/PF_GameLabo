@@ -3,17 +3,21 @@
 <h1 class='text-center font-weight-bold mb-3'>お気に入り一覧</h1>
 <% @favorite_games.each do |game| %>
     <div class='row'>
+      <!--ゲーム画像-->
       <div class='col-md-4 pt-2'>
         <%= link_to game_path(game) do %>
-          <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png" %>
+          <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png", size:"220x200" %>
         <% end %>
       </div>
+      <!--ゲームタイトル-->
       <div class='col-md-3 align-self-center'>
         <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
+      <!--ゲーム評価　平均点-->
       <div class='col-md-2 align-self-center'>
         <div class="review-total_rate" data-score=<%= game.total_rate %>></div>
       </div>
+      <!--編集ボタン-->
       <% if game.user == current_user %>
         <div class='col-md-1 align-self-center'>
           <%= link_to 'Edit', edit_game_path(game), class: "btn btn-success edit_game_#{game.id}" %>
@@ -24,9 +28,11 @@
       <% end %>
     </div>
   <% end %>
+  <!--ページネーション-->
 <div class='row mt-md-5 justify-content-center'>
   <%= paginate @favorite_games %>
 </div>
+<!--星評価　発火-->
 <script>
   $('.review-total_rate').raty({
     readOnly: true,
