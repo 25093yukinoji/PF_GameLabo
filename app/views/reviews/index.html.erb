@@ -30,7 +30,7 @@
       </div>
       <div class="col align-self-center edit-button">
         <% if current_user == review.user %>
-          <%= link_to '口コミを削除', game_review_path(@game, review), method: :delete, class:'btn btn-danger' %>
+          <%= link_to 'レビューを削除', game_review_path(@game, review), method: :delete, class:'btn btn-danger' %>
         <% end %>
       </div>
     </div>

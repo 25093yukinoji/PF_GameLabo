@@ -4,7 +4,7 @@
     <!--ゲーム画像-->
     <div class="form-group mt-5">
       <h5>ゲーム画像</h5>
-      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png", size:"300x200" %></p>
+      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png",id: "preview", size:"300x200" %></p>
       <p><%= f.attachment_field :image, class: 'justify-content-center' %></p>
     </div>
     <!--ゲームタイトル-->
@@ -24,10 +24,20 @@
     </div>
     <!--投稿ボタン-->
     <div class="form-group">
-      <%= f.submit '投稿', class:'btn btn-primary form-control' %>
+      <%= f.submit '更新', class:'btn btn-success form-control' %>
     </div>
   <% end %>
   <hr class="border-dark my-5">
   <div class="form-group">
     <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
   </div>
+<!--プレビュー用のimgタグ-->
+<script>
+  $('#game_image').on('change', function (e) {
+    var reader = new FileReader();
+    reader.onload = function (e) {
+        $("#preview").attr('src', e.target.result);
+    }
+    reader.readAsDataURL(e.target.files[0]);
+});
+</script>
