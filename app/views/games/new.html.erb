@@ -1,12 +1,13 @@
 <!--タブ名-->
 <% @page_title = '新規投稿' %>
 <h1 class='text-center font-weight-bold mb-4'>新規投稿</h1>
+<!--エラーメッセージ-->
   <%= render 'layouts/errors', obj: @game %>
   <%= form_with model:@game, local:true do |f| %>
     <!--ゲーム画像-->
     <div class="form-group mt-5">
       <h5>ゲーム画像</h5>
-      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png",id: "preview", size:"300x200" %></p>
+      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png",id: "preview", size:"220x200" %></p>
       <p><%= f.attachment_field :image, class: 'form-control-file' %></p>
     </div>
     <!--ゲームタイトル-->
@@ -31,7 +32,7 @@
   <% end %>
 <hr class="border-dark my-5">
   <div class="form-group">
-    <%= link_to "戻る", :back, class:"btn btn-info btn-block" %>
+    <%= link_to "戻る", my_page_path, class:"btn btn-info btn-block" %>
   </div>
   <!--プレビュー用のimgタグ-->
 <script>

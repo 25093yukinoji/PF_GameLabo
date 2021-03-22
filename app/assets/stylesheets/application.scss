@@ -50,12 +50,12 @@
 }
 
 .main-visual-title {
-  color: #fff; /* 文字色を白に変更 */
+  color: #fff;
   font-size: 6rem;
 }
 
 .main-visual-text {
-  color: #fff; /* 文字色を白に変更 */
+  color: #fff;
   font-size: 2rem;
 }
 // max-width
@@ -76,13 +76,13 @@ header {
 .alert-alert {
   @extend .alert-danger;
 }
-
+// fontawesome
 .fa, .fas {
   font-family: 'Font Awesome 5 Free';
   font-weight: 600;
   line-height: normal;
 }
-
+//エラーメッセージ
 #notice {
   color: green;
 }
@@ -90,7 +90,7 @@ header {
 #error_explanation {
   color: red;
 }
-
+//ランキング順位
 .ranknumber{
   color: red;
 }

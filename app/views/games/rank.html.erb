@@ -1,21 +1,27 @@
 <!--タブ名-->
 <% @page_title = 'ランキング' %>
 <h1 class='text-center font-weight-bold mb-3'>ランキング</h1>
+<!--ランキング順位　計算-->
   <% @ranking.each.with_index(1) do |game,i| %>
     <% i += @base_of_ranking %>
     <div class='row'>
+      <!--ランキング順位-->
       <div class='h3 align-self-center'><b>第<span class='ranknumber h2'><%= i %></span>位</b></div>
+      <!--ゲーム画像-->
       <div class='col-md-4 pt-2'>
         <%= link_to game_path(game) do %>
-          <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png" %>
+          <%= attachment_image_tag game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png", size:"220x200" %>
         <% end %>
       </div>
+      <!--ゲームタイトル-->
       <div class='col-3 align-self-center'>
         <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
+      <!--ゲーム評価　平均点-->
       <div class='col-2 align-self-center'>
         <div id="rank-review-total_rate_<%= game.id %>" data-score=<%= game.total_rate %>></div>
       </div>
+      <!--編集ボタン-->
       <% if game.user == current_user %>
         <div class='col-1 align-self-center'>
           <%= link_to 'Edit', edit_game_path(game), class: "btn btn-success edit_game_#{game.id}" %>
@@ -26,6 +32,7 @@
       <% end %>
     </div>
   <% end %>
+  <!--星評価　発火-->
 <script>
   <% @ranking.each do |game| %>
   $('#rank-review-total_rate_<%= game.id %>').raty({
