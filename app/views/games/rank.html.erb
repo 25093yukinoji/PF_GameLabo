@@ -1,3 +1,5 @@
+<!--タブ名-->
+<% @page_title = 'ランキング' %>
 <h1 class='text-center font-weight-bold mb-3'>ランキング</h1>
   <% @ranking.each.with_index(1) do |game,i| %>
     <% i += @base_of_ranking %>
