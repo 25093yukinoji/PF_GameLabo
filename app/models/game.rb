@@ -6,7 +6,7 @@ class Game < ApplicationRecord
   has_many :favorites, dependent: :destroy
   has_many :favorited_users, through: :favorites, source: :user
   # 画像処理
-  attachment :image
+  attachment :image, content_type: ["image/jpeg", "image/png"]
   # バリデーション
   validates :title, presence: true
   validates :introduction, presence: true, length: { maximum: 500 }
