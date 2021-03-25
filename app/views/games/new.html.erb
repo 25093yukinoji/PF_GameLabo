@@ -7,7 +7,7 @@
     <!--ゲーム画像-->
     <div class="form-group mt-5">
       <h5>ゲーム画像</h5>
-      <p class='text-center'><%= attachment_image_tag @game, :image, class: "img-square", fallback: "img/noimage-1-580x440.png",id: "preview", size:"220x200" %></p>
+      <p class='text-center'><%= attachment_image_tag @game, :image, :fill, 220, 200, fallback: "img/noimage-1-580x440.png",id: "preview", size:"220x200" %></p>
       <p><%= f.attachment_field :image, class: 'form-control-file' %></p>
     </div>
     <!--ゲームタイトル-->
