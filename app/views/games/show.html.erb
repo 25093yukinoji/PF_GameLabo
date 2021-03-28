@@ -34,11 +34,11 @@
       <div class='row ml-1 mb-1'>
         <div class="review-total_rate" data-score=<%= @game.total_rate %>></div>
         <div class='ml-2 align-self-center'>レビュー数： <%= @game.reviews.count %>件</div>
-        <div class='ml-sm-2 align-self-center'><%= link_to "レビューを見る", game_reviews_path(@game), class: 'btn btn-sm btn-primary' %></div>
+        <div class='pt-3 pt-md-0 ml-md-2 align-self-center'><%= link_to "レビューを見る", game_reviews_path(@game), class: 'btn btn-sm btn-primary' %></div>
       </div>
     </div>
     <!--お気に入りボタン-->
-    <div class='col-md-1'>
+    <div class='col-md-1 pt-3 pt-md-0'>
       <% if user_signed_in? %>
         <% if @game.user == current_user %>
         <% else %>
@@ -51,7 +51,7 @@
   </div>
 <% end %>
 <!--チャット機能-->
-<div class='text-center border border-dark bg-warning mt-5'><h4>チャットスペース</h4></div>
+<div class='text-center border border-dark bg-warning mt-3 mt-md-5'><h4>チャットスペース</h4></div>
 <%= render 'games/chat', game: @game,chat: @chat %>
 <div class='row mt-1 justify-content-center'>
   <%= paginate @chats %>

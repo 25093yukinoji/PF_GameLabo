@@ -6,3 +6,12 @@
   color:#e54747;
   font-size: 40px;
 }
+
+@media screen and (max-width: 576px) {
+  .favotitle{
+    margin-top: 5px;
+  }
+  .favoedit{
+    margin-top: 6px;
+  }
+}

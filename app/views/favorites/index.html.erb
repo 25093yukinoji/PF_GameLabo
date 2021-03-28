@@ -10,7 +10,7 @@
         <% end %>
       </div>
       <!--ゲームタイトル-->
-      <div class='col-md-3 align-self-center'>
+      <div class='favotitle col-md-3 align-self-center'>
         <h4 class='font-weight-bold'><%= game.title %></h4>
       </div>
       <!--ゲーム評価　平均点-->
@@ -19,10 +19,10 @@
       </div>
       <!--編集ボタン-->
       <% if game.user == current_user %>
-        <div class='col-md-1 align-self-center'>
+        <div class='favoedit col-md-1 align-self-center'>
           <%= link_to 'Edit', edit_game_path(game), class: "btn btn-success edit_game_#{game.id}" %>
         </div>
-        <div class='col-md-1 align-self-center'>
+        <div class='favoedit col-md-1 align-self-center'>
           <%= link_to 'Destroy', game_path(game), method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-danger destroy_game_#{game.id}"%>
         </div>
       <% end %>

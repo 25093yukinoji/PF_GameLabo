@@ -1,24 +1,24 @@
 <% @chats.each do |chat| %>
   <% chat_user = chat.user %>
-    <div class='row mt-md-1 mx-md-1 border-bottom  border-dark'>
+    <div class='row mt-1 mx-1 border-bottom  border-dark'>
       <!--投稿ユーザーネーム-->
-      <div class='col-md-1 ml-1 mb-1'><%= chat_user.name %></div>
+      <div class='col-3 col-md-1 ml-md-1 mb-1'><%= chat_user.name %></div>
       <!--投稿日-->
-      <div class='col-md-1'><%= chat.created_at.strftime('%Y/%m/%d') %></div>
+      <div class='col-3 col-md-1'><%= chat.created_at.strftime('%Y/%m/%d') %></div>
       <!--投稿内容-->
-      <div class='col align-items-stretch'><%= simple_format(Rinku.auto_link(chat.comment, :all, 'target="_blank"').html_safe) %></div>
+      <div class='col-md-8 align-items-stretch'><%= simple_format(Rinku.auto_link(chat.comment, :all, 'target="_blank"').html_safe) %></div>
       <!--投稿削除-->
       <% if current_user == chat_user %>
-        <div class='col-md-1'><%= link_to '削除', game_chat_path(chat.game_id, chat.id), class: 'btn-sm btn-danger', method: :delete %></div>
+        <div class='col-md-1 mb-2 mb-md-0'><%= link_to '削除', game_chat_path(chat.game_id, chat.id), class: 'btn-sm btn-danger', method: :delete %></div>
       <% end %>
     </div>
 <% end %>
 <!--投稿フォーム-->
 <% if user_signed_in? %>
   <%= form_with model:[game,@chat], local: true do |f| %>
-    <div class='form-row mt-md-2'>
+    <div class='form-row mt-2'>
       <div class='col-md-10'><%= f.text_area :comment, class:'form-control',required: true,minlength: @chat.comment,maxlength: '200' %></div>
-      <div class='col align-self-center'><%= f.submit '送信', class: 'btn btn-lg btn-success'%></div>
+      <div class='col-md-2 pt-2 pt-md-0 align-self-center'><%= f.submit '送信', class: 'btn btn-lg btn-success'%></div>
     </div>
   <% end %>
 <% end %>

@@ -25,39 +25,7 @@
   color: brack;
 }
 
-//メインビジュアル
-.main-visual {
-  position:  relative;
-  width: 1200px;
-  height: 500px;
-  text-align:  center;
-  background-image: image-url("img/top.jpg");
-  background-size: cover;
-  background-position: center;
-  margin:  auto;
-}
-.main-visual-content {
-  position:  absolute;
-  width: 50%;
-  height: 180px;
-  background-color: rgba(0, 0, 0, 0.2);
-  text-align: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
 
-.main-visual-title {
-  color: #fff;
-  font-size: 6rem;
-}
-
-.main-visual-text {
-  color: #fff;
-  font-size: 2rem;
-}
 // max-width
 .mw-md {
   max-width: 576px;
