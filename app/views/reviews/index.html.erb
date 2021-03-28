@@ -34,7 +34,7 @@
         </div>
       </div>
       <!--削除ボタン-->
-      <div class="col align-self-center edit-button">
+      <div class="col pb-3 pb-md-0 align-self-center edit-button">
         <% if current_user == review.user %>
           <%= link_to 'レビューを削除', game_review_path(@game, review), method: :delete, class:'btn btn-danger' %>
         <% end %>

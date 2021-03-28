@@ -1,10 +1,10 @@
 <!--タブ名-->
  <% @page_title = 'マイページ' %>
 <h1 class='text-center font-weight-bold mb-4'>マイページ</h1>
-<div class='row justify-content-sm-around'>
-    <div><%= link_to "会員情報変更", edit_user_registration_path, class: 'btn btn-primary' %></div>
-    <div><%= link_to "ゲーム新規投稿", new_game_path, class: 'btn btn-success' %></div>
-    <div><%= link_to "お気に入り一覧", favorites_path, class: 'btn btn-info' %></div>
+<div class='row col-md-12 justify-content-around'>
+    <div class="userbtn"><%= link_to "会員情報変更", edit_user_registration_path, class: 'btn btn-primary' %></div>
+    <div class="userbtn"><%= link_to "ゲーム新規投稿", new_game_path, class: 'btn btn-success' %></div>
+    <div class="userbtn"><%= link_to "お気に入り一覧", favorites_path, class: 'btn btn-info' %></div>
 </div>
 <!--ユーザー投稿ゲーム-->
 <div class='mt-4'>

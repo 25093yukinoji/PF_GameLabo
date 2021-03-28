@@ -10,7 +10,7 @@
     <div class='col-md-2 col-form-label'>
       <%= f.label :rate,'評価' %>
     </div>
-    <div class ='ml-md-3'>
+    <div class ='ml-3'>
       <%= f.hidden_field :rate, id: :review_star %>
     </div>
   </div>
@@ -36,7 +36,7 @@
     </div>
   </div>
   <!-- 確認ボタン -->
-  <div class="form-group row justify-content-md-around">
+  <div class="form-group row justify-content-around">
     <div><%= f.submit '投稿する', class:"btn btn-success" %></div>
     <div><%= link_to "戻る", game_reviews_path(@game), class:"btn btn-info" %></div>
   </div>
