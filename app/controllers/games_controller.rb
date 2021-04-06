@@ -1,4 +1,7 @@
 class GamesController < ApplicationController
+
+  before_action :ensure_correct_user, only: [:edit, :destroy]
+
   def index
     @q = Game.ransack(params[:q])
     @games = @q.result(distinct: true)
@@ -33,7 +36,6 @@ class GamesController < ApplicationController
   end
 
   def destroy
-    @game = Game.find(params[:id])
     @game.destroy
     redirect_to my_page_path
   end
@@ -48,7 +50,6 @@ class GamesController < ApplicationController
   end
 
   def edit
-    @game = Game.find(params[:id])
   end
 
   def favorites
@@ -73,5 +74,12 @@ class GamesController < ApplicationController
 
   def game_params
     params.require(:game).permit(:image, :title, :introduction, :total_rate, :site_url)
+  end
+
+  def ensure_correct_user
+    @game = Game.find(params[:id])
+    unless @game.user == current_user
+      redirect_to my_page_path
+    end
   end
 end
